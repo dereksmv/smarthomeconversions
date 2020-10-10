@@ -5,7 +5,9 @@
   "main": "server.js",
   "scripts": {
     "test": "run",
-    "dev": "nodemon server.js"
+    "dev": "nodemon server.js",
+    "start": "node server.js"
+
   },
   "author": "Derek Smith",
   "license": "ISC",
