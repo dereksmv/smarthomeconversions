@@ -73,7 +73,3 @@ app.get("/admin/pages/homepage", function(req, res) {
 app.use("/api/pages", page)
 
 app.listen(port, () => console.log(`Server up and running on port ${port}`));
-
-
-  
-
