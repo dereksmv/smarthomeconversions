@@ -1,0 +1,24 @@
+{
+  "name": "smarthomeconversions",
+  "version": "1.0.0",
+  "description": "Want to experience modern, cutting edge living? SMARTHomeConversions can turn your home into a hub, where you control all functions of your home from any smart device.",
+  "main": "server.js",
+  "scripts": {
+    "test": "run",
+    "dev": "nodemon server.js"
+  },
+  "author": "Derek Smith",
+  "license": "ISC",
+  "dependencies": {
+    "@okta/oidc-middleware": "^4.0.1",
+    "@okta/okta-sdk-nodejs": "^3.3.1",
+    "axios": "^0.20.0",
+    "body-parser": "^1.19.0",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-session": "^1.17.1",
+    "mongoose": "^5.10.8",
+    "nodemon": "^2.0.4",
+    "pug": "^3.0.0"
+  }
+}

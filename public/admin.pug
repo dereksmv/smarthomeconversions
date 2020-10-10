@@ -1,0 +1,90 @@
+doctype html
+html(lang='en')
+ head
+   title Edit Homepage!
+   link(rel="stylesheet", href="../../style.css")
+   link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css")
+   script
+        
+ body
+    div.container
+        h1 Homepage
+    div
+    form
+        
+        div.row
+            section.grey.lighten-4
+                .container
+                    h2 Hero
+                        .row
+                            div.col.l6.s12
+                                 h6 Hero Image
+                                    .file-field.input-field
+                                        .btn
+                                            span File
+                                            input(type='file')
+                                        .file-path-wrapper
+                                            input.file-path.validate(type='text')
+                        .row
+                            div.col.l6.s12
+                                 h6 Hero Title Text
+                                    textarea.materialize-textarea(type="textarea" id="hero_title")
+                            .col.l6.s12
+                                 h6 Hero Subtext
+                                    textarea.materialize-textarea(type="textarea" id="hero_text")
+            .row
+            section.container
+                h2 Section One
+                .row
+                    .col.l6.s12
+                         h6 Section One Header
+                            textarea.materialize-textarea(type="textarea" id="section_one_header")
+                    .col.l6.s12
+                         h6 Section One Description
+                            textarea.materialize-textarea(type="textarea" id="section_one_copy")
+        
+                .row
+                    .col.l6.s12
+                         h6 Card One Title
+                            textarea.materialize-textarea(type="textarea" id="card_one_title")
+                    .col.l6.s12
+                         h6 Card One Description
+                            textarea.materialize-textarea(type="textarea" id="card_one_copy")
+                    .col.l6.s12
+                         h6 Card Two Title
+                            textarea.materialize-textarea(type="textarea" id="card_two_title")
+                    .col.l6.s12
+                         h6 Card Two Description
+                            textarea.materialize-textarea(type="textarea" id="card_two_copy")
+                    .col.l6.s12
+                         h6 Card Three Title
+                            textarea.materialize-textarea(type="textarea" id="card_three_title")
+                    .col.l6.s12
+                         h6 Card Three Description
+                            textarea.materialize-textarea(type="textarea" id="card_three_copy")
+                    .col.l6.s12
+                         h6 Card Four Title
+                            textarea.materialize-textarea(type="textarea" id="card_four_title")
+                    .col.l6.s12
+                         h6 Card Four Description
+                            textarea.materialize-textarea(type="textarea" id="card_four_copy")
+                    .col.l6.s12
+                         h6 Card Five Title
+                            textarea.materialize-textarea(type="textarea" id="card_five_title")
+                    .col.l6.s12
+                         h6 Card Four Description
+                            textarea.materialize-textarea(type="textarea" id="card_four_copy")
+        .row.grey.lighten-4
+            section.container
+                h2 Section 2
+                .row
+                    .col.l6.s12
+                        h6 Section 2 Header
+                            textarea.materialize-textarea(type="textarea" id="section_two_header")
+                    .col.l6.s12
+                        h6 Section 2 Copy
+                            textarea.materialize-textarea(type="textarea" id="section_two_copy")
+
+        .row.container
+            button.btn.col.l4 Save
+                    

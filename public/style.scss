@@ -1,0 +1,224 @@
+
+@font-face {
+    font-family: 'louis_george_cafebold_italic';
+    src: url('../fonts/louis_george_cafe_bold-webfont.woff2') format('woff2'),
+         url('../fonts/louis_george_cafe_bold-webfont.woff ') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'louis_george_cafebold';
+    src: url('../fonts/louis_george_cafe_bold-webfont.woff2') format('woff2'),
+         url('../fonts/louis_george_cafe_bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'louis_george_cafeitalic';
+    src: url('louis_george_cafe_italic-webfont.woff2') format('woff2'),
+         url('louis_george_cafe_italic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'louis_george_cafe_lightitalic';
+    src: url('../fonts/louis_george_cafe_light_italic-webfont.woff2') format('woff2'),
+         url('../fonts/louis_george_cafe_light_italic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'louis_george_cafe_lightRg';
+    src: url('../fonts/../fonts/louis_george_cafe_light-webfont.woff2') format('woff2'),
+         url('../fonts/louis_george_cafe_light-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'louis_george_caferegular';
+    src: url('../fonts/louis_george_cafe-webfont.woff2') format('woff2'),
+         url('../fonts/louis_george_cafe-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+$paragraph-text:     "louis_george_cafe_lightRg";
+$header-text:   "louis_george_cafebold";
+$primary-color: #17479d;
+$primary-dark: #240a67;
+$accent-color: #529eba;
+$accent-color-darken: #3B548E;
+$grey-background: #e7e6e5;
+$dark-grey-background: #90908f;
+
+
+
+h1 {
+    font-family: $header-text;
+    color: $primary-color;
+    text-transform: uppercase;
+    font-size: 55px;
+}
+
+h3 {
+    font-family: $header-text;
+    color: $accent-color;
+    text-transform: uppercase;
+    font-size: 35px;
+}
+
+p {
+    font-family: $paragraph-text;
+    color: $primary-color;
+    font-size: 30px;
+}
+
+nav {
+    background-color: $primary-color;
+    position: fixed;
+    z-index: 1;
+   
+}
+
+button:hover {
+    background-color: $accent-color-darken !important;
+}
+
+nav {
+    
+
+    span {
+        font-family: $paragraph-text;
+
+    }
+
+    img {
+        height: 80px;
+    }
+
+    ul {
+        li {
+            a {
+                font-family: $paragraph-text;
+                font-size: 30px;
+        }
+    }
+
+}
+
+
+}
+
+.homepage-hero {
+    
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0.856), rgba(0, 0, 0, 0.5)), url("../images/kitchen-and-dining-area-1080721.jpg");
+    min-height: 80vh;
+    background-position: center;
+    background-size: cover;
+}
+
+section {
+    img {
+        margin-top: 80px;
+        max-height: 200px;
+    }
+
+    p {
+        margin-top: 10vh;
+    }
+
+ }
+
+ .btn-large {
+     background-color: $accent-color;
+     z-index: 2;
+     }
+
+.card a { 
+    color: $accent-color;
+}
+
+.contact-field-homepage {
+    margin-top: 7%;
+
+    h3 {
+        margin: 0;
+    }
+
+    p {
+        margin-top: 0;
+    }
+
+    button {
+        background-color: $accent-color;
+        
+
+        i {
+            color: white;
+        }
+    }
+
+    i {
+        color: $primary-color;
+    }
+}
+
+  /* label color */
+  .input-field label {
+    color: $primary-color;
+  }
+  /* label focus color */
+  .input-field input[type=text]:focus + label {
+    color: $accent-color;
+  }
+  /* label underline focus color */
+  .input-field input[type=text]:focus {
+    border-bottom: 1px solid $accent-color;
+    box-shadow: 0 1px 0 0 #000;
+  }
+  /* valid color */
+  .input-field input[type=text].valid {
+    border-bottom: 1px solid $accent-color;
+    box-shadow: 0 1px 0 0 #000;
+  }
+  /* invalid color */
+  .input-field input[type=text].invalid {
+    border-bottom: 1px solid $dark-grey-background;
+    box-shadow: 0 1px 0 0 #000;
+  }
+  /* icon prefix focus color */
+  .input-field .prefix.active {
+    color: #000;
+  }
+
+.homepage-about {
+    background-color: $grey-background;
+    padding: 15px 0;
+}
+       
