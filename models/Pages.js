@@ -9,7 +9,8 @@ const pagesSchema = new Schema({
 
     pageComponents: {
             type: Object,
-            default: {}
+            default: {},
+            required: true
     }
 
 })

@@ -102,7 +102,7 @@ p {
 nav {
     background-color: $primary-color;
     position: fixed;
-    z-index: 1;
+    z-index: 500;
    
 }
 
@@ -156,8 +156,8 @@ section {
  }
 
  .btn-large {
-     background-color: $accent-color;
-     z-index: 2;
+     background-color: red;
+
      }
 
 .card a { 

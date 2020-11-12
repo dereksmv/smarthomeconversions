@@ -7,7 +7,11 @@ const mongoose = require("mongoose")
 const bodyParser = require("body-parser");
 const path = require("path")
 
+
+const services = require("./services/dbcalls")
+
 const page = require("./routes/api/pages")
+
 
 const app = express();
 // Bodyparser middleware
@@ -27,6 +31,7 @@ app.use(
   );
   
   const { ExpressOIDC } = require('@okta/oidc-middleware');
+const Pages = require("./models/Pages");
   const oidc = new ExpressOIDC({
     appBaseUrl: process.env.HOST_URL,
     issuer: `${process.env.OKTA_ORG_URL}`,
@@ -58,13 +63,34 @@ app.use(express.static(__dirname + "/fonts"));
 app.use(express.static(__dirname + "/images"))
 
 app.get('/',function(req,res) {
-    res.sendFile(path.join(__dirname + "/public/index.html"));
+  Pages.findOne({pageTitle: "Homepage"}, (err, doc) => {
+    if (err) {
+      console.log(err)
+    } if (doc) {
+      console.log(doc.pageComponents)
+      res.render(path.join(__dirname + "/public/index.pug"), doc.pageComponents)
+    }
+  })
+    
   });
 
 
 app.get("/admin/pages/homepage", function(req, res) {
   if (req.userContext) {
-  res.render(path.join(__dirname + "/public/admin.pug"))
+  Pages.findOne({pageTitle: "Homepage"}, (err, doc) => {
+    if (err) { 
+      console.log(err)
+    }
+    if (doc) {
+      console.log(doc.pageComponents)
+      res.render(path.join(__dirname + "/public/admin.pug"), doc.pageComponents)
+    }
+    else {
+      console.log("here")
+      res.render(path.join(__dirname + "/public/admin.pug"))
+    }
+  })
+  
   } else {
     res.redirect("/login")
   }

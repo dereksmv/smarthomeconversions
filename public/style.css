@@ -57,7 +57,7 @@ p {
 nav {
   background-color: #17479d;
   position: fixed;
-  z-index: 1;
+  z-index: 500;
 }
 
 button:hover {

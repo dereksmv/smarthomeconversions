@@ -1,5 +1,12 @@
+
+
 module.exports = {
     removeDashes: function(str) {return str.replace(/_/g, " ");},
+
+    retrieveForServer: function(schema, searchParams) {
+        return schema.findOne(searchParams)
+    },
+        
 
     retrieve: function(req, res, searchParams, schema) {
         schema.findOne(searchParams, (err, doc) => {
@@ -22,7 +29,7 @@ module.exports = {
                 console.log(err);
                 res.json(errMessage)
             } if (doc) {
-                schema.updateOne(searchParams, (err, updated) => {
+                schema.updateOne(searchParams, {$set: req.body}, (err, updated) => {
                     if (err) {
                         console.log(err);
                         res.json(errMessage)

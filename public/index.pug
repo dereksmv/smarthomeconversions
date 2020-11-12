@@ -1,0 +1,118 @@
+meta(charset="UTF-8")
+meta(name="viewport", content="width=device-width,initial-scale=1")
+link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css")
+link(rel="stylesheet", href="./style.css")
+link(href="https://fonts.googleapis.com/icon?family=Material+Icons", rel="stylesheet")
+title= hero_title
+script(src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js")
+script.
+  
+  M.AutoInit();
+                    document.addEventListener('DOMContentLoaded', function() {
+      var elems = document.querySelectorAll('.materialboxed');
+      var instances = M.Materialbox.init(elems, options);
+    });
+  
+header
+  nav
+    .nav-wrapper.z-depth-5
+      .brand-logo
+        img(src="../images/SMART_Logo_IconOnly_WhiteOnBlue.png")
+      ul.right.hide-on-med-and-down
+        li
+          a(href="sass.html") Services
+        li
+          a(href="badges.html") Contact
+        li
+          a(href="about.html") About Us
+        li
+          a(href="blog.html") Blog
+section.homepage-hero
+  .container
+    img.responsive-img(src="../images/SMART_Logo_BlueOnWhite.png")
+    p= hero_text
+    button.waves-effect.waves-light.btn-large.z-depth-2
+      i.material-icons.left contact_phone
+      | Get a FREE Estimate
+section.homepage-services
+  .container
+    h3= section_one_header
+    p= section_one_copy
+    .row
+      .col.l4.s12
+        .card
+          .card-image
+            img(src="../images/round-grey-speaker-on-brown-board-1072851.jpg")
+            span.card-title= card_one_title
+          .card-content
+            p= card_one_copy
+          .card-action
+            a(href="#") Learn More
+      .col.l4.s12
+        .card
+          .card-image
+            img(src="../images/woman-holding-gray-ceramic-mug-846080.jpg")
+            span.card-title= card_two_title
+          .card-content
+            p= card_two_copy
+          .card-action
+            a(href="#") Learn More
+      .col.l4.s12
+        .card
+          .card-image
+            img(src="../images/home-real-estate-106399.jpg")
+            span.card-title= card_three_title
+          .card-content
+            p= card_three_copy
+          .card-action
+            a(href="#") Learn More
+    .row
+      .col.l4.s12
+        .card
+          .card-image
+            img(src="../images/happy-family-sitting-on-a-couch-and-watching-tv-4260639.jpg")
+            span.card-title= card_four_title
+          .card-content
+            p= card_four_copy
+          .card-action
+            a(href="#") Learn More
+      .col.l4.s12
+        .card
+          .card-image
+            img(src="../images/interior-design-of-home-1643383.jpg")
+            span.card-title= card_five_title
+          .card-content
+            p= card_five_copy
+          .card-action
+            a(href="#") Learn More
+      .col.l4.s12.contact-field-homepage
+        h3 Ready to learn more?
+        p Fill out some info, and we'll get in touch!
+        .row
+          form.col.s12
+            .row
+              .input-field.col.s6
+                i.material-icons.prefix account_circle
+                input#icon_prefix.validate(type="text")
+                label.active(for="icon_prefix") Name
+              .input-field.col.s6
+                i.material-icons.prefix phone
+                input#icon_telephone.validate(type="tel")
+                label.active(for="icon_telephone") Telephone
+            .row
+              .input-field.col.s12
+                i.material-icons.prefix email
+                textarea#textarea1.materialize-textarea
+                label.active(for="textarea1") Enter a message
+            br
+            br
+            button.btn.waves-effect.waves-light.col.s12(type="submit", name="action")
+              | Submit
+
+              i.material-icons.right send
+section.homepage-about
+  .container
+    h3.row.col.s6= section_two_header
+    .row.valign-wrapper
+      img.responsive-img.materialboxed(src="../images/smart-home-ecosystem-lrg.jpg")
+      p.col.s12.l8= section_two_copy
