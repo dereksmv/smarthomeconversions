@@ -137,7 +137,7 @@ nav {
 
 .homepage-hero {
     
-    background-image: linear-gradient(to right, rgba(255, 255, 255, 0.856), rgba(0, 0, 0, 0.5)), url("../images/kitchen-and-dining-area-1080721.jpg");
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0.856), rgba(0, 0, 0, 0.5)), url("../images/hero-image.png");
     min-height: 80vh;
     background-position: center;
     background-size: cover;
@@ -156,7 +156,7 @@ section {
  }
 
  .btn-large {
-     background-color: red;
+     background-color: $accent-color;
 
      }
 
@@ -221,4 +221,15 @@ section {
     background-color: $grey-background;
     padding: 15px 0;
 }
-       
+
+.primary-color-background {
+    background-color: $primary-color;
+    color: white;
+}
+      
+.dark-color-background {
+    background-color: $primary-dark;
+    color: white !important
+}
+
+
