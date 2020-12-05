@@ -108,6 +108,70 @@ app.get("/smarthome-blog", (req, res) => {
 
 })
 
+app.get("/about-us", (req, res) => {
+  Pages.findOne({pageTitle: "aboutUs"}, (err, doc) => {
+    if (err) {
+      console.log(err)
+    } if (doc) {
+        console.log(doc.pageComponents)
+        res.render(path.join(__dirname + "/public/pages/public/aboutus.pug"), doc.pageComponents)
+    } else {
+        res.render(path.join(__dirname + "/public/pages/public/aboutus.pug"))
+    }
+  })
+})
+
+app.get("/services", (req, res) => {
+  Pages.findOne({pageTitle: "services"}, (err, doc) => {
+    if (err) {
+      console.log(err)
+    } if (doc) {
+        console.log(doc.pageComponents)
+        res.render(path.join(__dirname + "/public/pages/public/aboutus.pug"), doc.pageComponents)
+    } else {
+        res.render(path.join(__dirname + "/public/pages/public/aboutus.pug"))
+    }
+  })
+})
+
+app.get("/contact", (req, res) => {
+  res.render(path.join(__dirname+ "/public/pages/public/contact.pug"))
+})
+
+app.get("/admin/pages/about-us", function(req, res) {
+  if (req.userContext) {
+    Pages.findOne({pageTitle: "aboutUs"}, (err, doc) => {
+      if (err) {
+        console.log(err);
+      } if (doc) {
+        console.log(doc.pageComponents)
+        res.render(path.join(__dirname + "/public/pages/admin/editaboutpage.pug"), doc.pageComponents)
+      } else {
+        res.render(path.join(__dirname + "/public/pages/admin/editaboutpage.pug"))
+      }
+    })
+  } else {
+    res.redirect("/login")
+  }
+})
+
+app.get("/admin/pages/services", function(req, res) {
+  if (req.userContext) {
+    Pages.findOne({pageTitle: "aboutUs"}, (err, doc) => {
+      if (err) {
+        console.log(err);
+      } if (doc) {
+        console.log(doc.pageComponents)
+        res.render(path.join(__dirname + "/public/pages/admin/editservicespage.pug"), doc.pageComponents)
+      } else {
+        res.render(path.join(__dirname + "/public/pages/admin/editservicespage.pug"))
+      }
+    })
+  } else {
+    res.redirect("/login")
+  }
+})
+
 
 app.get("/admin/pages/homepage", function(req, res) {
   if (req.userContext) {

@@ -167,9 +167,14 @@ section p {
 
 .blog-header {
   background-image: url("../images/blogheader.png.jpg");
-  height: 300px;
+  min-height: 300px;
   width: 100%;
   vertical-align: bottom;
+  color: white;
+}
+
+.blog-header p {
+  color: white
 }
 
 .blog-header h1 {

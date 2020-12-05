@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Contact Us
+        link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css")
+        link(rel="stylesheet", href="./style.css")
+        link(href="https://fonts.googleapis.com/icon?family=Material+Icons", rel="stylesheet")
+        title= hero_title
+        script(src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js")
+    body
+        nav
+            .nav-wrapper
+                a(href="/")
+                    .brand-logo
+                        img(src="../images/SMART_Logo_IconOnly_WhiteOnBlue.png")
+                ul.right.hide-on-med-and-down
+                    li
+                        a(href="/services") Services
+                    li
+                        a(href="Services") Contact
+                    li
+                        a(href="/about-us") About Us
+                    li
+                        a(href="/smarthome-blog") Blog  
+        br
+
+        .blog-header
+            .blog-text-box.col.s12.valign-wrapper
+                .container       
+                    h1.col.s12 Contact Us
+                    p Ready to get started? Here's where you can find us:
+                    ul
+                        li (573) 239 4852
+                        li smarthomeconversion@gmail.com
+                        li The form below
+        form.col.s12.container
+            .row
+              .input-field.col.s6
+                i.material-icons.prefix account_circle
+                input#icon_prefix.validate(type="text")
+                label.active(for="icon_prefix") Name
+              .input-field.col.s6
+                i.material-icons.prefix phone
+                input#icon_telephone.validate(type="tel")
+                label.active(for="icon_telephone") Telephone
+            .row
+              .input-field.col.s12
+                i.material-icons.prefix email
+                textarea#textarea1.materialize-textarea
+                label.active(for="textarea1") Enter a message
+            br
+            br
+            button.btn.waves-effect.waves-light.col.s12(type="submit", name="action")
+              | Submit
