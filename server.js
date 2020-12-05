@@ -98,6 +98,7 @@ app.get("/smarthome-blog", (req, res) => {
           title: doc[i].title,
           excerpt: doc[i].excerpt,
           slug: doc[i].slug,
+          date: doc[i].date
         }
         blogs.push(blogProps)
       }
@@ -137,6 +138,7 @@ app.get("/services", (req, res) => {
 app.get("/contact", (req, res) => {
   res.render(path.join(__dirname+ "/public/pages/public/contact.pug"))
 })
+
 
 app.get("/admin/pages/about-us", function(req, res) {
   if (req.userContext) {
@@ -247,6 +249,19 @@ app.get("/admin/blogs/new-post/", (req, res) => {
   } else {
     res.redirect("/login")
   }
+})
+app.get("/blog/:slug", (req, res) => {
+  BlogPosts.findOne({slug: req.params.slug}, (err, doc) => {
+    if (err) {
+      console.log(err)
+      res.redirect("/")
+    } if (doc) {
+      console.log(doc.title)
+      res.render(path.join(__dirname + "/public/pages/public/blogpost.pug"), doc)
+    } else {
+      res.redirect("/")
+    }
+  })
 })
 
 

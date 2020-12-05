@@ -33,5 +33,7 @@ body
                     li
                         a(href= "/blog/" + blog["slug"])
                             h3= blog["title"]
+                        p= blog["date"]
                         p= blog["excerpt"]
+                        a(href= "/blog/" + blog["slug"]) Read more
                              

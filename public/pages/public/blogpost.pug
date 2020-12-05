@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title= title
+        link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css")
+        link(rel="stylesheet", href="../style.css")
+        link(href="https://fonts.googleapis.com/icon?family=Material+Icons", rel="stylesheet")
+        title= hero_title
+        script(src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js")
+    body
+        nav
+            .nav-wrapper
+                a(href="/")
+                    .brand-logo
+                        img(src="../images/SMART_Logo_IconOnly_WhiteOnBlue.png")
+                ul.right.hide-on-med-and-down
+                    li
+                        a(href="/services") Services
+                    li
+                        a(href="Services") Contact
+                    li
+                        a(href="/about-us") About Us
+                    li
+                        a(href="/smarthome-blog") Blog  
+        br
+
+        .blog-header
+            .blog-text-box.col.s12.valign-wrapper
+                .container       
+                    h1.col.s12= title
+                    p= author
+                    p= date
+        .container
+            p!= post
